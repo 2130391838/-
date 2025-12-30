@@ -91,8 +91,8 @@
     "answer": "BCD",
     "id": 1766644569601,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -402,9 +402,9 @@
     "answer": "ABC",
     "id": 1766644563057,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -534,9 +534,9 @@
     "answer": "A",
     "id": 1766644565811,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A"
@@ -598,9 +598,9 @@
     "answer": "A",
     "id": 1766644566414,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A"
@@ -662,8 +662,8 @@
     "answer": "A",
     "id": 1766644560414,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -726,8 +726,8 @@
     "answer": "A",
     "id": 1766644567246,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -1278,9 +1278,9 @@
     "answer": "BCD",
     "id": 1766644709584,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B",
@@ -1312,9 +1312,9 @@
     "answer": "AD",
     "id": 1766644705942,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -1481,8 +1481,8 @@
     "answer": "ABCD",
     "id": 1766644710008,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -1637,9 +1637,9 @@
     "answer": "B",
     "id": 1766644707389,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B"
@@ -2077,8 +2077,8 @@
     "answer": "B",
     "id": 1766644709213,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -2269,9 +2269,9 @@
     "answer": "D",
     "id": 1766644712580,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "D"
@@ -2333,9 +2333,9 @@
     "answer": "BCD",
     "id": 1766644844950,
     "stats": {
-      "total": 0,
-      "right": 0,
-      "wrong": 0
+      "total": 2,
+      "right": 1,
+      "wrong": 1
     },
     "correctArr": [
       "B",
@@ -2367,9 +2367,9 @@
     "answer": "ABC",
     "id": 1766644848669,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -2436,9 +2436,9 @@
     "answer": "ABD",
     "id": 1766644844557,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -2470,8 +2470,8 @@
     "answer": "BCD",
     "id": 1766644850087,
     "stats": {
-      "total": 1,
-      "right": 0,
+      "total": 2,
+      "right": 1,
       "wrong": 1
     },
     "correctArr": [
@@ -2641,8 +2641,8 @@
     "answer": "ABC",
     "id": 1766644844646,
     "stats": {
-      "total": 1,
-      "right": 0,
+      "total": 2,
+      "right": 1,
       "wrong": 1
     },
     "correctArr": [
@@ -2675,9 +2675,9 @@
     "answer": "BD",
     "id": 1766644845208,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B",
@@ -2930,9 +2930,9 @@
     "answer": "B",
     "id": 1766644849108,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B"
@@ -2978,8 +2978,8 @@
     "answer": "A",
     "id": 1766644845568,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -3178,8 +3178,8 @@
     "answer": "D",
     "id": 1766644843017,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -3434,8 +3434,8 @@
     "answer": "B",
     "id": 1766644846933,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -4010,9 +4010,9 @@
     "answer": "C",
     "id": 1766645090602,
     "stats": {
-      "total": 1,
+      "total": 2,
       "right": 0,
-      "wrong": 1
+      "wrong": 2
     },
     "correctArr": [
       "C"
@@ -4298,8 +4298,8 @@
     "answer": "D",
     "id": 1766645091467,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -4362,8 +4362,8 @@
     "answer": "C",
     "id": 1766645090666,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -4828,9 +4828,9 @@
     "answer": "ABC",
     "id": 1766645093701,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -4923,9 +4923,9 @@
     "answer": "B",
     "id": 1766645095790,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B"
@@ -5315,9 +5315,9 @@
     "answer": "C",
     "id": 1766645196445,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "C"
@@ -5571,8 +5571,8 @@
     "answer": "A",
     "id": 1766645198053,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -5768,9 +5768,9 @@
     "answer": "ABD",
     "id": 1766645199536,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -6006,9 +6006,9 @@
     "answer": "BCD",
     "id": 1766645193177,
     "stats": {
-      "total": 1,
+      "total": 2,
       "right": 0,
-      "wrong": 1
+      "wrong": 2
     },
     "correctArr": [
       "B",
@@ -6248,8 +6248,8 @@
     "answer": "B",
     "id": 1766645194519,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -6623,8 +6623,8 @@
     "answer": "ABCD",
     "id": 1766645349573,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -6752,8 +6752,8 @@
     "answer": "A",
     "id": 1766645348241,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -7008,8 +7008,8 @@
     "answer": "A",
     "id": 1766645344229,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -7200,9 +7200,9 @@
     "answer": "A",
     "id": 1766645347756,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A"
@@ -7712,8 +7712,8 @@
     "answer": "A",
     "id": 1766645436126,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -8996,9 +8996,9 @@
     "answer": "A",
     "id": 1766645517983,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A"
@@ -9092,9 +9092,9 @@
     "answer": "D",
     "id": 1766645517665,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "D"
@@ -9227,9 +9227,9 @@
     "answer": "ABC",
     "id": 1766645518429,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -9261,9 +9261,9 @@
     "answer": "AB",
     "id": 1766645520946,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -9432,8 +9432,8 @@
     "answer": "ABCD",
     "id": 1766645516304,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -9705,8 +9705,8 @@
     "answer": "ABCD",
     "id": 1766645522085,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -9780,8 +9780,8 @@
     "answer": "A",
     "id": 1766645521247,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -9852,9 +9852,9 @@
     "answer": "B",
     "id": 1766645515218,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B"
@@ -10177,8 +10177,8 @@
     "answer": "ABCD",
     "id": 1766645602035,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -10315,9 +10315,9 @@
     "answer": "BCD",
     "id": 1766645605391,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B",
@@ -10478,8 +10478,8 @@
     "answer": "A",
     "id": 1766645608677,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -10574,8 +10574,8 @@
     "answer": "A",
     "id": 1766645607003,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -10670,9 +10670,9 @@
     "answer": "B",
     "id": 1766645605997,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B"
@@ -10726,8 +10726,8 @@
     "answer": "A",
     "id": 1766645611067,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -10758,8 +10758,8 @@
     "answer": "C",
     "id": 1766645606010,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -10854,9 +10854,9 @@
     "answer": "A",
     "id": 1766645606645,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A"
@@ -11014,9 +11014,9 @@
     "answer": "B",
     "id": 1766645611878,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B"
@@ -11046,9 +11046,9 @@
     "answer": "D",
     "id": 1766645607328,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "D"
@@ -11078,8 +11078,8 @@
     "answer": "A",
     "id": 1766645609379,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -11609,8 +11609,8 @@
     "answer": "ABCD",
     "id": 1766646317085,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -11979,9 +11979,9 @@
     "answer": "B",
     "id": 1766646309804,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B"
@@ -12131,9 +12131,9 @@
     "answer": "D",
     "id": 1766646316918,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "D"
@@ -12259,8 +12259,8 @@
     "answer": "C",
     "id": 1766646311450,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -12553,9 +12553,9 @@
     "answer": "BCD",
     "id": 1766646389060,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B",
@@ -12655,9 +12655,9 @@
     "answer": "ABD",
     "id": 1766646386652,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -12689,8 +12689,8 @@
     "answer": "ABCD",
     "id": 1766646385972,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -12929,8 +12929,8 @@
     "answer": "ABCD",
     "id": 1766646383185,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -12964,8 +12964,8 @@
     "answer": "ABCD",
     "id": 1766646391275,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -13049,8 +13049,8 @@
     "answer": "B",
     "id": 1766646390490,
     "stats": {
-      "total": 1,
-      "right": 0,
+      "total": 2,
+      "right": 1,
       "wrong": 1
     },
     "correctArr": [
@@ -13329,9 +13329,9 @@
     "answer": "D",
     "id": 1766646390625,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "D"
@@ -13361,9 +13361,9 @@
     "answer": "C",
     "id": 1766646384183,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "C"
@@ -13393,9 +13393,9 @@
     "answer": "B",
     "id": 1766646390540,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B"
@@ -13817,8 +13817,8 @@
     "answer": "ABC",
     "id": 1766646471579,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -13851,9 +13851,9 @@
     "answer": "BCD",
     "id": 1766646476471,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B",
@@ -13953,8 +13953,8 @@
     "answer": "BCD",
     "id": 1766646469973,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -13987,9 +13987,9 @@
     "answer": "AB",
     "id": 1766646469689,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -14020,9 +14020,9 @@
     "answer": "ABC",
     "id": 1766646476185,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -14054,9 +14054,9 @@
     "answer": "ACD",
     "id": 1766646475982,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -14225,9 +14225,9 @@
     "answer": "ABCD",
     "id": 1766646469430,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -14492,9 +14492,9 @@
     "answer": "B",
     "id": 1766646469368,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B"
@@ -14588,8 +14588,8 @@
     "answer": "D",
     "id": 1766646477305,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -14748,8 +14748,8 @@
     "answer": "D",
     "id": 1766646477627,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -14812,9 +14812,9 @@
     "answer": "A",
     "id": 1766646477003,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A"
@@ -15392,8 +15392,8 @@
     "answer": "ABD",
     "id": 1766646570808,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -15621,8 +15621,8 @@
     "answer": "A",
     "id": 1766646572040,
     "stats": {
-      "total": 1,
-      "right": 1,
+      "total": 2,
+      "right": 2,
       "wrong": 0
     },
     "correctArr": [
@@ -15669,8 +15669,8 @@
     "answer": "A",
     "id": 1766646577289,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -15941,9 +15941,9 @@
     "answer": "C",
     "id": 1766646569490,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "C"
@@ -15973,9 +15973,9 @@
     "answer": "C",
     "id": 1766646576082,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "C"
@@ -16308,8 +16308,8 @@
     "answer": "ABCD",
     "id": 1766646651733,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -16343,9 +16343,9 @@
     "answer": "ABC",
     "id": 1766646652298,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -16601,9 +16601,9 @@
     "answer": "B",
     "id": 1766646653723,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B"
@@ -16697,8 +16697,8 @@
     "answer": "A",
     "id": 1766646654386,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -16873,8 +16873,8 @@
     "answer": "D",
     "id": 1766646650359,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -17129,9 +17129,9 @@
     "answer": "B",
     "id": 1766646651309,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B"
@@ -17193,8 +17193,8 @@
     "answer": "ABCD",
     "id": 1766646729913,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -17435,9 +17435,9 @@
     "answer": "BCD",
     "id": 1766646728811,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B",
@@ -17469,9 +17469,9 @@
     "answer": "ABC",
     "id": 1766646731108,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -17711,9 +17711,9 @@
     "answer": "ABC",
     "id": 1766646725642,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -17772,8 +17772,8 @@
     "answer": "A",
     "id": 1766646731239,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -17820,8 +17820,8 @@
     "answer": "A",
     "id": 1766646729689,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -17868,8 +17868,8 @@
     "answer": "A",
     "id": 1766646726164,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -18308,9 +18308,9 @@
     "answer": "C",
     "id": 1766646726576,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "C"
@@ -18340,9 +18340,9 @@
     "answer": "ABD",
     "id": 1766646835482,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -18408,9 +18408,9 @@
     "answer": "ABC",
     "id": 1766646830624,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -18645,9 +18645,9 @@
     "answer": "ABC",
     "id": 1766646834569,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -18851,9 +18851,9 @@
     "answer": "ABCD",
     "id": 1766646829460,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -19586,9 +19586,9 @@
     "answer": "ABD",
     "id": 1766646905863,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -20146,8 +20146,8 @@
     "answer": "B",
     "id": 1766646906133,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -20170,8 +20170,8 @@
     "answer": "A",
     "id": 1766646908895,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -20266,9 +20266,9 @@
     "answer": "B",
     "id": 1766646903264,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "B"
@@ -20490,8 +20490,8 @@
     "answer": "B",
     "id": 1766646907881,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 2,
+      "right": 2,
       "wrong": 0
     },
     "correctArr": [
@@ -20522,8 +20522,8 @@
     "answer": "B",
     "id": 1766646899797,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -20586,9 +20586,9 @@
     "answer": "A",
     "id": 1766646908281,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A"
@@ -20683,8 +20683,8 @@
     "answer": "ABC",
     "id": 1766646986711,
     "stats": {
-      "total": 1,
-      "right": 0,
+      "total": 2,
+      "right": 1,
       "wrong": 1
     },
     "correctArr": [
@@ -20717,9 +20717,9 @@
     "answer": "ABD",
     "id": 1766646988025,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -20921,9 +20921,9 @@
     "answer": "ABC",
     "id": 1766646986320,
     "stats": {
-      "total": 0,
+      "total": 1,
       "right": 0,
-      "wrong": 0
+      "wrong": 1
     },
     "correctArr": [
       "A",
@@ -21126,8 +21126,8 @@
     "answer": "A",
     "id": 1766646981114,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
@@ -21694,8 +21694,8 @@
     "answer": "C",
     "id": 1766646989587,
     "stats": {
-      "total": 0,
-      "right": 0,
+      "total": 1,
+      "right": 1,
       "wrong": 0
     },
     "correctArr": [
