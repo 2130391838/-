@@ -25,29 +25,37 @@ jobs:
         pip install flet
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.24.x'
 
+    - name: Accept Android Licenses
+      run: |
+        # 自动同意安卓协议，防止报错
+        yes | flutter doctor --android-licenses
+
     - name: Prepare main.py
       run: |
-        # 这一步确保文件名为 main.py
         if [ ! -f "main.py" ] && [ -f "app.py" ]; then
           echo "Renaming app.py to main.py"
           mv app.py main.py
         fi
-        
-        # 打印一下当前文件，确认为什么都有
         ls -la
 
     - name: Flet Build APK
       run: |
         # ★★★ 关键修复 ★★★
-        # 1. 使用 yes | 解决 SDK 安装询问
-        # 2. 去掉了 'main.py' 参数，直接让它在当前目录自动找
+        # 1. --project-name: 解决你的数字仓库名导致的崩溃问题
+        # 2. --product-name: 设置手机上看到的 App 名字
         
-        yes | flet build apk --verbose
+        flet build apk --project-name tiku_app --product-name "云创刷题" --verbose
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
