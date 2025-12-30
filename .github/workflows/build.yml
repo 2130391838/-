@@ -19,6 +19,7 @@ jobs:
       with:
         python-version: '3.11'
 
+    # 安装依赖到全局环境
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -36,29 +37,39 @@ jobs:
       with:
         flutter-version: '3.24.x'
 
-    - name: Accept Android Licenses
+    - name: Prepare Workspace
       run: |
-        # 自动同意安卓协议，防止报错
-        yes | flutter doctor --android-licenses
-
-    - name: Prepare main.py
-      run: |
+        # ★★★ 核心修复逻辑 ★★★
+        # 1. 创建一个名字合法的文件夹 (避免数字仓库名报错)
+        mkdir tiku_app
+        
+        # 2. 处理代码文件名 (确保叫 main.py)
         if [ ! -f "main.py" ] && [ -f "app.py" ]; then
-          echo "Renaming app.py to main.py"
           mv app.py main.py
         fi
-        ls -la
+        
+        # 3. 把所有关键文件复制到新文件夹里
+        cp main.py tiku_app/
+        cp tiku.json tiku_app/
+        # 注意：requirements.txt 也必须复制进去，打包需要用
+        if [ -f requirements.txt ]; then cp requirements.txt tiku_app/; fi
+        
+        # 4. 打印一下新文件夹里的东西，确保没问题
+        echo "Files in tiku_app:"
+        ls -l tiku_app/
 
     - name: Flet Build APK
       run: |
-        # ★★★ 关键修复 ★★★
-        # 1. --project-name: 解决你的数字仓库名导致的崩溃问题
-        # 2. --product-name: 设置手机上看到的 App 名字
+        # 5. 进入新文件夹
+        cd tiku_app
         
-        flet build apk --project-name tiku_app --product-name "云创刷题" --verbose
+        # 6. 开始打包 (使用最原始的命令，不加额外参数，避免报错)
+        # 配合 yes 自动同意 SDK 下载
+        yes | flet build apk --verbose
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: app-release
-        path: build/apk/app-release.apk
+        # 注意：打包结果会在新文件夹下的 build/apk 里
+        path: tiku_app/build/apk/app-release.apk
