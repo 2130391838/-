@@ -1,28 +1,16 @@
 import flet as ft
 import json
-import os
 import random
 import requests
 import re
 from datetime import datetime
 
 # --- 配置 ---
-DB_FILE = 'tiku.json'
+# 注意：安卓上不能直接写死文件路径，我们改用 page.client_storage
 DEFAULT_API_KEY = "sk-ncknahphvmzuizmzwdswehemhpzqvugfpeiabhjbapbbdctu"
 DEFAULT_API_URL = "https://api.siliconflow.cn/v1/chat/completions"
 
-# --- 核心逻辑函数 (完全复用你之前的) ---
-def load_db():
-    try:
-        with open(DB_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except:
-        return []
-
-def save_db(data):
-    with open(DB_FILE, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
+# --- 辅助函数 ---
 def get_text_fingerprint(text):
     if not text: return ""
     return re.sub(r'[^\w\u4e00-\u9fa5]+', '', text).lower()
@@ -48,57 +36,85 @@ def call_ai_import(text, api_key, model):
     except Exception as e:
         return [], str(e)
 
-# --- Flet APP 界面 ---
+# --- Flet APP 主程序 ---
 def main(page: ft.Page):
-    page.title = "集成云创刷题App"
+    page.title = "云创刷题"
     page.theme_mode = ft.ThemeMode.LIGHT
     page.scroll = "adaptive"
     
-    # 全局状态
-    db = load_db()
+    # ★★★ 核心修改：使用手机安全存储，防止白屏崩溃 ★★★
+    # 初始化数据
+    if not page.client_storage.contains_key("tiku_data"):
+        page.client_storage.set("tiku_data", [])
+        
+    # 读取数据
+    def get_db():
+        return page.client_storage.get("tiku_data") or []
+    
+    # 保存数据
+    def save_db(new_db):
+        page.client_storage.set("tiku_data", new_db)
+
+    # 状态变量
     current_q_index = -1
     user_selections = []
     
-    # --- 界面组件引用 ---
+    # 界面容器
     content_area = ft.Column()
     result_text = ft.Text(size=16, weight="bold")
     
-    # --- 功能：刷新题目显示 ---
+    # --- 渲染题目 ---
     def render_question():
         nonlocal current_q_index, user_selections
+        db = get_db() # 实时读取
+        
         content_area.controls.clear()
         result_text.value = ""
         user_selections = []
         
         if not db:
-            content_area.controls.append(ft.Text("题库为空，请去'导入'页添加题目"))
+            content_area.controls.append(ft.Container(
+                content=ft.Column([
+                    ft.Icon(ft.icons.INFO, size=50, color=ft.colors.BLUE),
+                    ft.Text("题库是空的", size=20, weight="bold"),
+                    ft.Text("请点击底部“导入”按钮，\n让 AI 帮你出题！", text_align="center")
+                ], alignment="center", horizontal_alignment="center"),
+                padding=50, alignment=ft.alignment.center
+            ))
             page.update()
             return
 
+        # 随机抽题
         if current_q_index == -1 or current_q_index >= len(db):
             current_q_index = random.randint(0, len(db)-1)
         
         q = db[current_q_index]
         
-        # 题目类型和内容
-        content_area.controls.append(ft.Text(f"[{q['type']}]", color=ft.colors.BLUE, weight="bold"))
-        content_area.controls.append(ft.Text(q['content'], size=18))
-        content_area.controls.append(ft.Divider())
+        # 题目区域
+        content_area.controls.append(ft.Container(
+            content=ft.Column([
+                ft.Text(f"[{q['type']}]", color=ft.colors.BLUE, weight="bold"),
+                ft.Text(q['content'], size=18, weight="w500"),
+            ]),
+            padding=10,
+            border=ft.border.all(1, ft.colors.GREY_300),
+            border_radius=10
+        ))
         
-        # 选项
+        content_area.controls.append(ft.Divider(height=20, color="transparent"))
+        
+        # 选项区域
         options_col = ft.Column()
         is_multi = "多" in q['type']
         
-        # 选项点击回调
         def on_select(e, label):
             nonlocal user_selections
             if is_multi:
                 if e.control.value: user_selections.append(label)
                 else: user_selections.remove(label)
             else:
-                user_selections = [label] # 单选只能有一个
+                user_selections = [label]
             
-        # 渲染选项
         radio_group = ft.RadioGroup(content=options_col, on_change=lambda e: on_select(None, e.control.value))
         
         for opt in q['options']:
@@ -117,53 +133,54 @@ def main(page: ft.Page):
         else:
             content_area.controls.append(options_col)
             
-        # 提交按钮
+        # 按钮区域
         def submit_answer(e):
             user_ans = "".join(sorted(user_selections))
             correct_ans = "".join(sorted(q['correctArr'])) if 'correctArr' in q else q['answer']
             
             if user_ans == correct_ans:
-                result_text.value = f"🎉 正确！答案是 {correct_ans}"
+                result_text.value = f"🎉 回答正确！"
                 result_text.color = ft.colors.GREEN
             else:
-                result_text.value = f"❌ 错误。选了 {user_ans}，答案是 {correct_ans}"
+                result_text.value = f"❌ 错误\n你的选择：{user_ans}\n正确答案：{correct_ans}"
                 result_text.color = ft.colors.RED
             page.update()
 
-        # 下一题按钮
         def next_question(e):
             nonlocal current_q_index
-            current_q_index = random.randint(0, len(db)-1)
+            current_q_index = random.randint(0, len(get_db())-1)
             render_question()
             page.update()
 
-        btn_row = ft.Row([
-            ft.ElevatedButton("提交答案", on_click=submit_answer),
-            ft.ElevatedButton("下一题", on_click=next_question, icon=ft.icons.ARROW_FORWARD)
-        ])
-        
         content_area.controls.append(ft.Divider())
-        content_area.controls.append(btn_row)
-        content_area.controls.append(result_text)
+        content_area.controls.append(ft.Row([
+            ft.ElevatedButton("提交", on_click=submit_answer, bgcolor=ft.colors.BLUE, color="white"),
+            ft.OutlinedButton("下一题", on_click=next_question)
+        ], alignment="center"))
+        content_area.controls.append(ft.Container(content=result_text, padding=10, alignment=ft.alignment.center))
         page.update()
 
-    # --- 页面切换逻辑 ---
+    # --- 导航逻辑 ---
     def nav_change(e):
         index = e.control.selected_index
         content_area.controls.clear()
         
-        if index == 0: # 刷题页
+        if index == 0:
             render_question()
             
-        elif index == 1: # 导入页
-            txt_input = ft.TextField(label="粘贴文本", multiline=True, min_lines=5)
+        elif index == 1:
+            txt_input = ft.TextField(label="粘贴题目文本", multiline=True, min_lines=8, hint_text="在这里粘贴乱七八糟的题目文本...")
             status_txt = ft.Text()
             
             def run_import(e):
-                status_txt.value = "AI 正在思考... (请稍等)"
+                if not txt_input.value: return
+                status_txt.value = "🤖 AI 正在拼命识别中 (需要联网)..."
                 page.update()
+                
                 new_qs, log = call_ai_import(txt_input.value, DEFAULT_API_KEY, "Qwen/Qwen2.5-32B-Instruct")
+                
                 if new_qs:
+                    db = get_db()
                     count = 0
                     fingerprints = {get_text_fingerprint(x['content']) for x in db}
                     for nq in new_qs:
@@ -173,27 +190,37 @@ def main(page: ft.Page):
                             db.append(nq)
                             fingerprints.add(fp)
                             count += 1
-                    save_db(db)
-                    status_txt.value = f"导入成功：{count} 题"
+                    save_db(db) # 保存到手机存储
+                    status_txt.value = f"✅ 成功导入 {count} 道新题！\n(重复题目已自动过滤)"
                     status_txt.color = ft.colors.GREEN
                 else:
-                    status_txt.value = "导入失败，请检查文本"
+                    status_txt.value = f"❌ 识别失败，请检查网络。\nAI 日志: {log[:100]}..."
                     status_txt.color = ft.colors.RED
                 page.update()
 
-            content_area.controls.append(ft.Text("AI 导入 (默认 32B 模型)", size=20))
+            content_area.controls.append(ft.Text("AI 智能导题", size=20, weight="bold"))
             content_area.controls.append(txt_input)
-            content_area.controls.append(ft.ElevatedButton("开始导入", on_click=run_import))
+            content_area.controls.append(ft.ElevatedButton("开始识别", on_click=run_import, width=200))
             content_area.controls.append(status_txt)
             page.update()
             
-        elif index == 2: # 关于
-            content_area.controls.append(ft.Text("集成云创刷题App", size=30, weight="bold"))
-            content_area.controls.append(ft.Text("开发者：by-CCZU赵海博", size=20))
-            content_area.controls.append(ft.Text("感谢您的使用，多多支持！"))
+        elif index == 2:
+            db = get_db()
+            content_area.controls.append(ft.Text("关于", size=30, weight="bold"))
+            content_area.controls.append(ft.Text("集成云创刷题App", size=20))
+            content_area.controls.append(ft.Text(f"当前题库总数：{len(db)} 题"))
+            content_area.controls.append(ft.Divider())
+            content_area.controls.append(ft.Text("开发者：by-CCZU赵海博"))
+            
+            def clear_data(e):
+                page.client_storage.clear()
+                page.snack_bar = ft.SnackBar(ft.Text("数据已清空"))
+                page.snack_bar.open = True
+                page.update()
+                
+            content_area.controls.append(ft.ElevatedButton("清空所有题目", on_click=clear_data, color="red"))
             page.update()
 
-    # --- 底部导航栏 ---
     page.navigation_bar = ft.NavigationBar(
         destinations=[
             ft.NavigationDestination(icon=ft.icons.QUIZ, label="刷题"),
@@ -203,7 +230,6 @@ def main(page: ft.Page):
         on_change=nav_change
     )
     
-    # 启动默认加载第一页
     render_question()
     page.add(content_area)
 
