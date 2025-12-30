@@ -14,9 +14,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: List files (Debug)
-      run: ls -R
-
     - name: Setup Python
       uses: actions/setup-python@v5
       with:
@@ -31,22 +28,26 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.24.x' # 尝试升级到 3.24 以匹配 Flet 要求
+        flutter-version: '3.24.x'
+
+    - name: Prepare main.py
+      run: |
+        # 这一步确保文件名为 main.py
+        if [ ! -f "main.py" ] && [ -f "app.py" ]; then
+          echo "Renaming app.py to main.py"
+          mv app.py main.py
+        fi
+        
+        # 打印一下当前文件，确认为什么都有
+        ls -la
 
     - name: Flet Build APK
       run: |
-        # ★★★ 关键修复：使用 yes | 自动同意所有提示 ★★★
-        # 这样当 Flet 问 "Proceed? [Y/n]" 时，会自动填入 Y
+        # ★★★ 关键修复 ★★★
+        # 1. 使用 yes | 解决 SDK 安装询问
+        # 2. 去掉了 'main.py' 参数，直接让它在当前目录自动找
         
-        if [ -f "main.py" ]; then
-          yes | flet build apk main.py --verbose
-        elif [ -f "app.py" ]; then
-          mv app.py main.py
-          yes | flet build apk main.py --verbose
-        else
-          echo "Error: Cannot find main.py or app.py"
-          exit 1
-        fi
+        yes | flet build apk --verbose
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
