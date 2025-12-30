@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: List files (Debug)
-      run: ls -R  # 这一步会列出所有文件，方便我们排查文件名对不对
+      run: ls -R
 
     - name: Setup Python
       uses: actions/setup-python@v5
@@ -31,16 +31,18 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.22.x'
+        flutter-version: '3.24.x' # 尝试升级到 3.24 以匹配 Flet 要求
 
     - name: Flet Build APK
       run: |
-        # 尝试自动查找 main.py，如果您的文件叫 app.py，这里会自动处理
+        # ★★★ 关键修复：使用 yes | 自动同意所有提示 ★★★
+        # 这样当 Flet 问 "Proceed? [Y/n]" 时，会自动填入 Y
+        
         if [ -f "main.py" ]; then
-          flet build apk main.py --verbose
+          yes | flet build apk main.py --verbose
         elif [ -f "app.py" ]; then
-          mv app.py main.py # 强制改名为 main.py 以符合 Flet 标准
-          flet build apk main.py --verbose
+          mv app.py main.py
+          yes | flet build apk main.py --verbose
         else
           echo "Error: Cannot find main.py or app.py"
           exit 1
