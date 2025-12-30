@@ -12,10 +12,13 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4  # 升级到了 v4
+      uses: actions/checkout@v4
+
+    - name: List files (Debug)
+      run: ls -R  # 这一步会列出所有文件，方便我们排查文件名对不对
 
     - name: Setup Python
-      uses: actions/setup-python@v5 # 升级到了 v5
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
 
@@ -28,14 +31,23 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.22.x' # 使用更新更稳定的 Flutter 版本
+        flutter-version: '3.22.x'
 
     - name: Flet Build APK
       run: |
-        flet build apk --verbose
+        # 尝试自动查找 main.py，如果您的文件叫 app.py，这里会自动处理
+        if [ -f "main.py" ]; then
+          flet build apk main.py --verbose
+        elif [ -f "app.py" ]; then
+          mv app.py main.py # 强制改名为 main.py 以符合 Flet 标准
+          flet build apk main.py --verbose
+        else
+          echo "Error: Cannot find main.py or app.py"
+          exit 1
+        fi
 
     - name: Upload APK
-      uses: actions/upload-artifact@v4 # ★★★ 关键修复：这里改成了 v4 ★★★
+      uses: actions/upload-artifact@v4
       with:
         name: app-release
         path: build/apk/app-release.apk
