@@ -3,8 +3,8 @@ name: Build Android APK
 on:
   push:
     branches:
-      - main  # 或者是 master，看你的主分支叫什么
-  workflow_dispatch: # 允许手动点击运行
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -12,10 +12,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4  # 升级到了 v4
 
     - name: Setup Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5 # 升级到了 v5
       with:
         python-version: '3.11'
 
@@ -28,14 +28,14 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.16.x' # Flet 需要较新的 Flutter
+        flutter-version: '3.22.x' # 使用更新更稳定的 Flutter 版本
 
     - name: Flet Build APK
       run: |
         flet build apk --verbose
 
     - name: Upload APK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4 # ★★★ 关键修复：这里改成了 v4 ★★★
       with:
         name: app-release
         path: build/apk/app-release.apk
